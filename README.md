@@ -17,7 +17,7 @@
   - Image Segmentation
 
 ### 📫 How to reach me
-- linkedin:
+- linkedin: https://www.linkedin.com/in/eunseok-kim-781395215/
 - email: zzanges2003@naver.com
 
 <!--
