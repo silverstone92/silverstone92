@@ -26,6 +26,10 @@ LINE Plus VOOM AI lab - AI Engineer 포지션의 과제 전형에 참여할 기�
 $ pip install -r requirements.txt
 ```
 
+## 2. Data Preparation
+본 실험에서는 CIFAR-10 데이터셋이 사용되었습니다. <br>
+아래의 Training을 통해 학습 코드를 실행하면 자동으로 다운로드 됩니다.
+
 ## 3. Training
 실험을 위해 터미널에서 아래 명령어를 입력하면 모델 학습을 시작할 수 있습니다.
 ```
