@@ -2,7 +2,7 @@
 LINE Plus VOOM AI lab - AI Engineer 포지션의 과제 전형에 참여할 기회를 주신 것에 감사드립니다.
 
 # Introduction
-LINE Plus VOOM AI lab - AI Engineer 포지션의 과제 전형에 참여할 기회를 주신 것에 감사드립니다. <br>
+LINE Plus VOOM AI lab - AI Engineer 포지션의 과제 전형에 참여할 기회를 주신 것에 감사드립니다. <br><br>
 본 Repo에서는 과제 전형 (TYPE B) - “InfoBatch: Lossless Training Speed Up by Unbiased Dynamic Data Pruning” 논문의 실험을 재현합니다. <br>
 해당 논문에서 제안하는 InfoBatch 기법을 사용했을시 Baseline 모델 대비 학습 속도는 개선 되면서 성능은 유지됨을 확인하는 것이 본 Repo의 목표입니다. <br>
 컨텐츠는 다음과 같습니다:
@@ -81,6 +81,19 @@ OneCycle LR scheduler (max_LR = 2.0)을 사용하는 등 논문과 동일하게 
 
 실험 결과, Pruining Ratio (r)을 0.3으로 설정했을떄, 전체 데이터셋을 모두 이용한 Baseline 대비 성능은 94.98%에서 94.94%로 약 0.04% 감소하여 거의 동등한 성능을 보였고,
 총 학습 시간은 166.75분에서 111.83분으로 약 33% 감소하여 동등한 성능을 유지하며 학습 속도를 개선할 수 있음을 확인하였습니다. 
+
+#### Visualize
+터미널에서 아래 명령어를 입력하면 Baseline 모델과 InfoBatch 모델의 Accuracy와 Loss를 그래프로 비교할 수 있습니다.<br>
+```
+# Baseline vs. Infobatch (r=0.3)
+python visualize.py --infobatch_experiment_name cifar10_resnet18_infobatch_r_0_3_b256
+
+# Baseline vs. Infobatch (r=0.5)
+python visualize.py --infobatch_experiment_name cifar10_resnet18_infobatch_r_0_5_b256
+
+# Baseline vs. Infobatch (r=0.7)
+python visualize.py --infobatch_experiment_name cifar10_resnet18_infobatch_r_0_7_b256
+```
 
 <p align="center">
   <img src="./figures/loss_base_ib_cifar10_resnet18_r_0_3_b256.png" width="400">
