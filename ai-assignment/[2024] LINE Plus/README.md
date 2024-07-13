@@ -82,6 +82,31 @@ OneCycle LR scheduler (max_LR = 2.0)을 사용하는 등 논문과 동일하게 
 실험 결과, Pruining Ratio (r)을 0.3으로 설정했을떄, 전체 데이터셋을 모두 이용한 Baseline 대비 성능은 94.98%에서 94.94%로 약 0.04% 감소하여 거의 동등한 성능을 보였고,
 총 학습 시간은 166.75분에서 111.83분으로 약 33% 감소하여 동등한 성능을 유지하며 학습 속도를 개선할 수 있음을 확인하였습니다. 
 
+<p align="center">
+  <img src="./figures/loss_base_ib_cifar10_resnet18_r_0_3_b256.png" width="400">
+  <img src="./figures/acc_base_infobatch_cifar10_resnet18_r_0_3_b256.png" width="400">
+</p>
+<p align="center">
+  <b>[Baseline vs. Infobatch (r=0.3): accuracy와 train/test loss 비교]</b>
+</p>
+
+<p align="center">
+  <img src="./figures/loss_base_ib_cifar10_resnet18_r_0_5_b256.png" width="400">
+  <img src="./figures/acc_base_infobatch_cifar10_resnet18_r_0_5_b256.png" width="400">
+</p>
+<p align="center">
+  <b>[Baseline vs. Infobatch (r=0.5): accuracy와 train/test loss 비교]</b>
+</p>
+
+<p align="center">
+  <img src="./figures/loss_base_ib_cifar10_resnet18_r_0_7_b256.png" width="400">
+  <img src="./figures/acc_base_infobatch_cifar10_resnet18_r_0_7_b256.png" width="400">
+</p>
+<p align="center">
+  <b>[Baseline vs. Infobatch (r=0.7): accuracy와 train/test loss 비교]</b>
+</p>
+
+
 ## 6. Citation
 ```bibtex
 @inproceedings{
