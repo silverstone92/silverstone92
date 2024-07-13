@@ -31,8 +31,7 @@ $ pip install -r requirements.txt
 ## 4. Testing
 
 ## 5. Experimental Results
-
-### CIFAR-10 Dataset (ResNet-18)
+### Image Classification - CIFAR-10 Dataset (ResNet-18)
 |Method|Best Accuracy (%)|Total Training Time (Min)|
 |:---:|:---:|:---:|
 |Full Dataset|94.98|166.75|
@@ -40,7 +39,7 @@ $ pip install -r requirements.txt
 |InfoBatch (r=0.5)|94.79|111.83|
 |InfoBatch (r=0.7)|94.34|86.49|
 
-## Citation
+## 6. Citation
 ```bibtex
 @inproceedings{
   title={InfoBatch: Lossless Training Speed Up by Unbiased Dynamic Data Pruning},
