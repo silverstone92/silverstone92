@@ -8,12 +8,12 @@ LINE Plus VOOM AI lab - AI Engineer 포지션의 과제 전형에 참여할 기�
 컨텐츠는 다음과 같습니다:
 
 ## Contents
-* [1. Getting Started](#1.-getting-started) <br>
-* [2. Data Preparation](#2.-data-preparation) <br>
-* [3. Training](#3.-training) <br>
-* [4. Testing](#4.-testing) <br>
-* [5. Experimental Results](#5.-experimental-results) <br>
-* [6. Citation](#5.-experimental-results) <br>
+[1. Getting Started](#1-getting-started) <br>
+[2. Data Preparation](#2-data-preparation) <br>
+[3. Training](#3-training) <br>
+[4. Testing](#4-testing) <br>
+[5. Experimental Results](#5-experimental-results) <br>
+[6. Citation](#6-citation) 
 
 ## 1. Getting Started
 ### 1) Experimental Settings
@@ -26,9 +26,9 @@ LINE Plus VOOM AI lab - AI Engineer 포지션의 과제 전형에 참여할 기�
 $ pip install -r requirements.txt
 ```
 
-## 3.
+## 3. Training
 
-## 4.
+## 4. Testing
 
 ## 5. Experimental Results
 
