@@ -25,6 +25,8 @@ LINE Plus VOOM AI lab - AI Engineer 포지션의 과제 전형에 참여할 기�
 ├─ text.py # 모델 성능 검증을 위한 코드
 ├─ visualize.py # 실험 결과 도식화를 위한 코드
 ├─ infobatch.py # InfoBatch 알고리즘을 위한 코드
+├─ models.py # Backbone network를 위한 코드
+├─ [LINE Plus] [LINE PLUS] VOOM_AI_Lab_AI_Engineer_논문리뷰_김은석.pdf # 논문 리뷰 파일 (.pdf)
 └─ README.md
 ```
 
@@ -47,7 +49,7 @@ $ pip install -r requirements.txt
 실험을 위해 터미널에서 아래 명령어를 입력하면 모델 학습을 시작할 수 있습니다.
 ```
 # Baseline model (batch_size=256)
-CUDA_VISIBLE_DEVICES=0,1  python train.py --experiment_name cifar10_resnet18_baseline_b256 --model ResNet18 --train_batch_size 256 --num_epoch 100 --ratio 0.0 --delta 0.0
+$ CUDA_VISIBLE_DEVICES=0,1  python train.py --experiment_name cifar10_resnet18_baseline_b256 --model ResNet18 --train_batch_size 256 --num_epoch 100 --ratio 0.0 --delta 0.0
 
 # InfoBatch (r=0.3, batch_size=256)
 $ CUDA_VISIBLE_DEVICES=0,1 python train.py --experiment_name cifar10_resnet18_infobatch_r_0_3_b256 --use_info_batch --model ResNet18 --train_batch_size 256 --num_epoch 100 --ratio 0.3 --delta 0.875
@@ -64,7 +66,7 @@ $ CUDA_VISIBLE_DEVICES=0,1 python train.py --experiment_name cifar10_resnet18_in
 학습된 모델(.pth)은 `./saved_models` 폴더에서 확인할 수 있습니다.
 ```
 # Baseline model (batch_size=256)
-CUDA_VISIBLE_DEVICES=0,1 python test.py --experiment_name cifar10_resnet18_baseline_b256 --model ResNet18
+$ CUDA_VISIBLE_DEVICES=0,1 python test.py --experiment_name cifar10_resnet18_baseline_b256 --model ResNet18
 
 # InfoBatch (r=0.3, batch_size=256)
 $ CUDA_VISIBLE_DEVICES=0,1 python test.py --experiment_name cifar10_resnet18_infobatch_r_0_3_b256 --model ResNet18
