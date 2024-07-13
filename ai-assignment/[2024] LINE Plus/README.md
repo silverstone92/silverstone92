@@ -44,7 +44,7 @@ $ CUDA_VISIBLE_DEVICES=0,1 python train.py --experiment_name cifar10_resnet18_in
 
 ## 4. Testing
 터미널에서 아래 명령어를 입력하면 학습이 완료된 모델의 성능을 테스트 할 수 있습니다. <br>
-학습된 모델(.pth)은 ./models 경로에서 확인할 수 있습니다.
+학습된 모델(.pth)은 `./saved_models` 폴더에서 확인할 수 있습니다.
 ```
 # Baseline model (batch_size=256)
 CUDA_VISIBLE_DEVICES=0,1 python test.py --experiment_name cifar10_resnet18_baseline_b256 --model ResNet18
