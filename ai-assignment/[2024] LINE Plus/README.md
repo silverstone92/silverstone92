@@ -26,7 +26,7 @@ LINE Plus VOOM AI lab - AI Engineer 포지션의 과제 전형에 참여할 기�
 ├─ visualize.py # 실험 결과 도식화를 위한 코드
 ├─ infobatch.py # InfoBatch 알고리즘을 위한 코드
 ├─ models.py # Backbone network를 위한 코드
-├─ [LINE Plus] [LINE PLUS] VOOM_AI_Lab_AI_Engineer_논문리뷰_김은석.pdf # 논문 리뷰 파일 (.pdf)
+├─ [LINE PLUS] VOOM_AI_Lab_AI_Engineer_논문리뷰_김은석.pdf # 논문 리뷰 파일 (.pdf)
 └─ README.md
 ```
 
