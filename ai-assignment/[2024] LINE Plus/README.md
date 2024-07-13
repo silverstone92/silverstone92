@@ -22,7 +22,7 @@ LINE Plus VOOM AI lab - AI Engineer 포지션의 과제 전형에 참여할 기�
 ├─ results/ # 학습된 모델의 정보가 저장된 폴더
 ├─ requirements.txt # 코드 실행을 위해 설치해야 할 라이브러리 목록
 ├─ train.py # 모델 학습을 위한 코드
-├─ text.py # 모델 성능 검증을 위한 코드
+├─ test.py # 모델 성능 검증을 위한 코드
 ├─ visualize.py # 실험 결과 도식화를 위한 코드
 ├─ infobatch.py # InfoBatch 알고리즘을 위한 코드
 ├─ models.py # Backbone network를 위한 코드
