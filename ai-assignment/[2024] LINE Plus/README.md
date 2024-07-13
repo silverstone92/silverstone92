@@ -16,7 +16,15 @@ The table of contents is as follow:
 ## 1. Getting Started
 #### 1) Experimental Settings
 
-  - Hardware specifications
+- **Hardware specifications** <br>
+```GPU```: NVIDIA T4 Tensor Core GPU x 4
+
+- **Requirements** <br>
+본 과제는 torch 2.0.1+cu117 & torchvision 0.16.2+cu118을 이용하여 수행되었습니다. <br>
+터미널에서 아래 명령어를 입력하여 필요한 라이브러리를 설치할 수 있습니다.
+``` 
+$ pip install -r requirements.txt
+```
 
 ## 3.
 
