@@ -1,10 +1,9 @@
 # [LINE Plus] VOOM AI lab - AI Engineer 과제 전형
-LINE Plus VOOM AI lab - AI Engineer 포지션의 과제 전형에 참여할 기회를 주신 것에 감사드립니다.
 
-# Introduction
+## Introduction
 LINE Plus VOOM AI lab - AI Engineer 포지션의 과제 전형에 참여할 기회를 주신 것에 감사드립니다. <br><br>
 본 Repo에서는 과제 전형 (TYPE B) - “InfoBatch: Lossless Training Speed Up by Unbiased Dynamic Data Pruning” 논문의 실험을 재현합니다. <br>
-해당 논문에서 제안하는 InfoBatch 기법을 사용했을시 Baseline 모델 대비 학습 속도는 개선 되면서 성능은 유지됨을 확인하는 것이 본 Repo의 목표입니다. <br>
+해당 논문에서 제안하는 InfoBatch 기법을 사용했을시 Baseline 모델 대비 학습 속도 개선 및 성능 유지 여부를 확인하는 것이 본 Repo의 목표입니다. <br>
 컨텐츠는 다음과 같습니다:
 
 ## Contents
@@ -14,6 +13,20 @@ LINE Plus VOOM AI lab - AI Engineer 포지션의 과제 전형에 참여할 기�
 [4. Testing](#4-testing) <br>
 [5. Experiments](#5-experiments) <br>
 [6. Citation](#6-citation) 
+
+## Repo 구조
+```
+.
+├─ saved_models/ # 학습된 모델의 weight (.pth)가 저장된 폴더
+├─ figure/ # 실험 결과가 도식화된 이미지가 저장된 폴더
+├─ results/ # 학습된 모델의 정보가 저장된 폴더
+├─ requirements.txt # 코드 실행을 위해 설치해야 할 라이브러리 목록
+├─ train.py # 모델 학습을 위한 코드
+├─ text.py # 모델 성능 검증을 위한 코드
+├─ visualize.py # 실험 결과 도식화를 위한 코드
+├─ infobatch.py # InfoBatch 알고리즘을 위한 코드
+└─ README.md
+```
 
 ## 1. Getting Started
 ### 1) Experimental Settings
@@ -67,8 +80,7 @@ $ CUDA_VISIBLE_DEVICES=0,1 python test.py --experiment_name cifar10_resnet18_inf
 #### Implementation details
 논문의 실험 설정을 인용하여 CIFAR-10 데이터셋을 이용하여 Image Classification 태스크에서 InfoBatch의 효과를 검증하였습니다. <br>
 Backbone Network로는 ResNet18 모델을 사용하였고, CrossEntrophy Loss (Label Smoothing 0.1), SGD Optimizer (momentum=0.9, weight decay=5e-4),
-OneCycle LR scheduler (max_LR = 2.0)을 사용하는 등 논문과 동일하게 설정하였습니다. <br>
-조금 더 빠른 실험을 위하여 논문과는 달리 batch size를 128이 아닌 256으로 설정하였습니다. <br>
+OneCycle LR scheduler을 사용하는 등 논문과 동일하게 설정하였습니다. 조금 더 빠른 실험을 위하여 논문과는 달리 batch size를 128이 아닌 256으로 설정하였습니다. <br>
 또한, Pruning Ratio (r)는 0.3, 0.5, 0.7 세가지로 변경하며 설정을 하였고 Annealing Ratio (δ)는 동일하게 0.875로 설정하여 실험을 수행하였습니다. 
 
 #### Experimental results
