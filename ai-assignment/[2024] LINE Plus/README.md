@@ -35,9 +35,9 @@ $ pip install -r requirements.txt
 |Method|Best Accuracy (%)|Total Training Time (Min)|
 |:---:|:---:|:---:|
 |Full Dataset|94.98|166.75|
-|InfoBatch (r=0.3)|94.96|137.92|
-|InfoBatch (r=0.5)|94.79|111.83|
-|InfoBatch (r=0.7)|94.34|86.49|
+|InfoBatch (r=0.3)|94.94(0.04⬇)|130.26(36.49⬇)|
+|InfoBatch (r=0.5)|94.79(0.19⬇)|111.83(54.92⬇)|
+|InfoBatch (r=0.7)|94.34(0.64⬇)|86.49(80.26⬇)|
 
 ## 6. Citation
 ```bibtex
