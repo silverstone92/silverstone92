@@ -27,7 +27,7 @@ The table of contents is as follow:
 ### CIFAR-10 Dataset (ResNet-18)
 |Method|Best Accuracy (%)|Total Training Time (Min)|
 |:---:|:---:|:---:|
-|Full Dataset|$94.98$|$166.75$|
-|InfoBatch (r=0.3)|$94.96$|$137.92$|
-|InfoBatch (r=0.5)|$94.79$|$111.83$|
-|InfoBatch (r=0.7)|$94.34$|$86.49$|
+|Full Dataset|94.98|166.75|
+|InfoBatch (r=0.3)|94.96|137.92|
+|InfoBatch (r=0.5)|94.79|111.83|
+|InfoBatch (r=0.7)|94.34|86.49|
