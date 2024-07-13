@@ -2,9 +2,9 @@
 LINE Plus VOOM AI lab - AI Engineer 포지션의 과제 전형에 참여할 기회를 주신 것에 감사드립니다.
 
 # Introduction
-Welcome to the Suprema face recognition(FR) framework!
-This manual will help you getting started with the Suprema FR framework.
-The table of contents is as follow:
+LINE Plus VOOM AI lab - AI Engineer 포지션의 과제 전형에 참여할 기회를 주신 것에 감사드립니다. <br>
+본 Repo에서는 과제 전형 (TYPE B) - “InfoBatch: Lossless Training Speed Up by Unbiased Dynamic Data Pruning” 논문의 실험을 재현합니다.
+해당 논문에서 제안하는 InfoBatch 기법을 사용했을시 Baseline 모델 대비 학습 속도는 개선 되면서 성능은 유지됨을 확인하는 것이 목표입니다.
 
 # Contents
 * [1. Getting Started](#1.-getting-started) <br>
@@ -14,12 +14,10 @@ The table of contents is as follow:
 * [5. Model Weights](#5.-model-weights) <br>
 
 ## 1. Getting Started
-#### 1) Experimental Settings
-
-- **Hardware specifications** <br>
-```GPU```: NVIDIA T4 Tensor Core GPU x 4
-
-- **Requirements** <br>
+### 1) Experimental Settings
+##### Hardware specifications <br>
+- ```GPU```: NVIDIA T4 Tensor Core GPU x 4
+##### Requirements <br>
 본 과제는 torch 2.0.1+cu117 & torchvision 0.16.2+cu118을 이용하여 수행되었습니다. <br>
 터미널에서 아래 명령어를 입력하여 필요한 라이브러리를 설치할 수 있습니다.
 ``` 
