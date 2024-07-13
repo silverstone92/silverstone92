@@ -27,6 +27,20 @@ $ pip install -r requirements.txt
 ```
 
 ## 3. Training
+실험을 위해 터미널에서 아래 명령어를 입력하면 모델 학습을 시작할 수 있습니다.
+```
+# Baseline model (batch_size=256)
+CUDA_VISIBLE_DEVICES=0,1  python train.py --experiment_name cifar10_resnet18_baseline_b256 --model ResNet18 --train_batch_size 256 --num_epoch 100 --ratio 0.0 --delta 0.0
+
+# InfoBatch (r=0.3, batch_size=256)
+$ CUDA_VISIBLE_DEVICES=0,1 python train.py --experiment_name cifar10_resnet18_infobatch_r_0_3_b256 --use_info_batch --model ResNet18 --train_batch_size 256 --num_epoch 100 --ratio 0.3 --delta 0.875
+
+# InfoBatch (r=0.5, batch_size=256)
+$ CUDA_VISIBLE_DEVICES=0,1 python train.py --experiment_name cifar10_resnet18_infobatch_r_0_5_b256 --use_info_batch --model ResNet18 --train_batch_size 256 --num_epoch 100 --ratio 0.5 --delta 0.875
+
+# InfoBatch (r=0.7, batch_size=256)
+$ CUDA_VISIBLE_DEVICES=0,1 python train.py --experiment_name cifar10_resnet18_infobatch_r_0_7_b256 --use_info_batch --model ResNet18 --train_batch_size 256 --num_epoch 100 --ratio 0.7 --delta 0.875
+```
 
 ## 4. Testing
 
@@ -35,6 +49,7 @@ $ pip install -r requirements.txt
 논문의 실험 설정을 인용하여 CIFAR-10 데이터셋을 이용하여 Image Classification 태스크에서 InfoBatch의 효과를 검증하였습니다. <br>
 Backbone Network로는 ResNet18 모델을 사용하였고, CrossEntrophy Loss (Label Smoothing 0.1), SGD Optimizer (momentum=0.9, weight decay=5e-4),
 OneCycle LR scheduler (max_LR = 2.0)을 사용하는 등 논문과 동일하게 설정하였습니다. <br>
+조금 더 빠른 실험을 위하여 논문과는 달리 batch size를 128이 아닌 256으로 설정하였습니다. <br>
 또한, Pruning Ratio (r)는 0.3, 0.5, 0.7 세가지로 변경하며 설정을 하였고 Annealing Ratio (δ)는 동일하게 0.875로 설정하여 실험을 수행하였습니다. 
 
 #### Experimental results
